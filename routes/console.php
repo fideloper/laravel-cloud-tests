@@ -7,4 +7,5 @@ use Illuminate\Support\Facades\Schedule;
 use App\Console\Commands\TestSchedulerOutput;
 
 Schedule::command(TestSchedulerOutput::class)
-    ->everyMinute();
+    ->everyMinute()
+    ->runInBackground();
