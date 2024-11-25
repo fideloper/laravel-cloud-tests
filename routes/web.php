@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
+    \Illuminate\Support\Facades\Log::info("okay from web request now");
     return view('welcome');
 });
 

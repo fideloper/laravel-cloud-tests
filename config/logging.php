@@ -127,6 +127,16 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+        'socket' => [
+            'driver'  => 'monolog',
+            'handler' => Monolog\Handler\SocketHandler::class,
+            'with' => [
+//                'connectionString' => '127.0.0.1:8765',
+                'connectionString' => 'unix:///tmp/cloud-init.sock',
+                'persistent' => true,
+            ],
+        ]
+
     ],
 
 ];
