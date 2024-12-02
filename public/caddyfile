@@ -1,0 +1,6 @@
+:2019 {
+    log { 
+        level info
+    }
+    log_skip /healthz*
+}
