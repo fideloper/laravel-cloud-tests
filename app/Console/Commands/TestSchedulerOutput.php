@@ -26,7 +26,6 @@ class TestSchedulerOutput extends Command
      */
     public function handle()
     {
-        sleep(1);
         Log::info("Log::info(): testing scheduler output");
         $this->info('$this->info(): testing scheduler output');
         $this->error('$this->error(): testing scheduler output');
