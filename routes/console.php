@@ -11,14 +11,14 @@ use App\Console\Commands\TestSchedulerOutput;
 //    ->runInBackground();
 
 
-Artisan::command('log', function () {
-    info('Logged in successfully on "log" command.');
-
-    $this->info('THIS SHOULD APPEAR ON LOGS, BECAUSE FOREGROUND');
-})->everyMinute();
-
-Artisan::command('log-in-background', function () {
-    info('Logged in successfully on "log-in-background" command.');
-
-    $this->info('THIS SHOULD NOT APPEAR ON LOGS, BECAUSE BACKGROUND');
-})->runInBackground()->everyMinute();
+//Artisan::command('log', function () {
+//    info('Logged in successfully on "log" command.');
+//
+//    $this->info('THIS SHOULD APPEAR ON LOGS, BECAUSE FOREGROUND');
+//})->everyMinute();
+//
+//Artisan::command('log-in-background', function () {
+//    info('Logged in successfully on "log-in-background" command.');
+//
+//    $this->info('THIS SHOULD NOT APPEAR ON LOGS, BECAUSE BACKGROUND');
+//})->runInBackground()->everyMinute();
