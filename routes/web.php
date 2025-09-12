@@ -25,6 +25,11 @@ Route::get('/text-x-frame-unset', function() {
     ]);
 });
 
+Route::get('/slow', function() {
+    sleep(7);
+    return "thanks for waiting";
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
