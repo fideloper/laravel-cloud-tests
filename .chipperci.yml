@@ -10,6 +10,7 @@ environment:
 pipeline:
   - name: Setup
     cmd: |
+      php -v
       cp -v .env.example .env
       composer install --no-interaction --prefer-dist --optimize-autoloader
       php artisan key:generate
