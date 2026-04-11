@@ -4,9 +4,9 @@ use App\Console\Commands\TestSchedulerOutput;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/', function (\Illuminate\Http\Request $request) {
     \Illuminate\Support\Facades\Log::info("okay from web request now");
-    return view('welcome');
+    return view('welcome', ['headers' => $request->headers->all()]);
 });
 
 Route::get('/text-x-frame-default', function() {
