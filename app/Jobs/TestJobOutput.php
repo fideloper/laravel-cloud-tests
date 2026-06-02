@@ -23,6 +23,7 @@ class TestJobOutput implements ShouldQueue
      */
     public function handle(): void
     {
+        usleep(500000); // half second
         Log::info("Log::info(): testing job output");
     }
 }

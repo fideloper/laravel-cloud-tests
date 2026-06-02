@@ -30,6 +30,18 @@ Route::get('/slow', function() {
     return "thanks for waiting";
 });
 
+Route::get('/dispatch', function() {
+    $count = request()->get('jobs', 1);
+    $total = 0;
+    while($count > 0) {
+        $total++;
+        \App\Jobs\TestJobOutput::dispatch();
+        $count--;
+    }
+
+    return  "Dispatched $total jobs";
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
